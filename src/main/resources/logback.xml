@@ -1,0 +1,16 @@
+<configuration>
+
+    <!-- Конфигурация для вывода логов в файл -->
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <file>logs/test-log.log</file> <!-- Путь к файлу, где будут сохраняться логи -->
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} - %5level - %msg%n</pattern> <!-- Формат лога -->
+        </encoder>
+    </appender>
+
+    <!-- Уровень логирования и назначение аппендера -->
+    <root level="INFO">
+        <appender-ref ref="FILE" />
+    </root>
+
+</configuration>
