@@ -1,7 +1,7 @@
 package factoryTests;
 
 
-import ehu.Verkhavodko.factorypages.LoginPage;
+import factorypages.LoginPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
