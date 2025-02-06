@@ -9,7 +9,6 @@ public class RegistrationPage {
 
     private WebDriver driver;
 
-    // Локаторы элементов страницы
     @FindBy(id = "customer.firstName")
     private WebElement firstNameField;
 
@@ -42,7 +41,6 @@ public class RegistrationPage {
 
     @FindBy(id = "repeatedPassword")
     private WebElement confirmPasswordField;
-
 
     @FindBy(xpath = "//input[@value='Register']")
     private WebElement registerButton;
@@ -87,7 +85,6 @@ public class RegistrationPage {
         return this;
     }
 
-
     public RegistrationPage enterSSN(String ssn) {
         ssnField.sendKeys(ssn);
         return this;
@@ -103,12 +100,10 @@ public class RegistrationPage {
         return this;
     }
 
-
     public RegistrationPage enterConfirmPassword(String confirmPassword) {
         confirmPasswordField.sendKeys(confirmPassword);
         return this;
     }
-
 
     public void clickRegisterButton() {
         registerButton.click();

@@ -9,8 +9,7 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
+        <maven.compiler.release>11</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
@@ -46,14 +45,6 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- JUnit 5 API todo -->
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-api</artifactId>
-            <version>5.10.2</version>
-            <scope>test</scope>
-        </dependency>
-
         <!-- AssertJ  -->
         <dependency>
             <groupId>org.assertj</groupId>
@@ -62,13 +53,19 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- SLF4J API -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>2.0.13</version>
+        </dependency>
 
-        <!-- Logback для SLF4J -->
+        <!-- Реализация SLF4J с Logback -->
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
-            <version>1.5.12</version> <!-- Выберите последнюю стабильную версию -->
+            <version>1.4.14</version>
         </dependency>
-    </dependencies>
 
+    </dependencies>
 </project>

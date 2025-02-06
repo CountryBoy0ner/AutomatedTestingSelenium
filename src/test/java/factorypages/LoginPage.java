@@ -6,9 +6,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage {
-    private WebDriver driver;
 
-    // Локатор для поля ввода логина
+    private final WebDriver driver;
+
     @FindBy(name = "username")
     private WebElement usernameField;
 
@@ -33,5 +33,9 @@ public class LoginPage {
 
     public void clickLoginButton() {
         loginButton.click();
+    }
+
+    public String getCurrentUrl() {
+        return driver.getCurrentUrl();
     }
 }
